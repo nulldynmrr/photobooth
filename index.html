@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CamBooth</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  </head>
+  <body>
+    <section class="section" id="section1">
+      <div class="container-left container-frame-image">
+        <img
+          src="..\img\frame-section1-001.svg"
+          alt="frame-foto"
+          class="img-frame1"
+        />
+        <img
+          src="..\img\frame-section1-002.svg"
+          alt="frame-foto"
+          class="img-frame2"
+        />
+        <img
+          src="..\img\frame-section1-003.svg"
+          alt="frame-foto"
+          class="img-frame3"
+        />
+      </div>
+      <div class="container-right">
+        <div class="container-title">
+          <img
+            src="../img/frame-title-Chambooth.svg"
+            alt="frame-foto"
+            class="img-chambooth"
+          />
+          <h1 class="title reenie-beanie-regular" id="animated-title">
+            atur moment kamu
+          </h1>
+        </div>
+        <button class="btn btn-mulai lora-uniquifier" id="btn-mulai">
+          Mulai
+        </button>
+      </div>
+    </section>
+
+    <section class="section" id="section2">
+      <div class="container-title">
+        <img
+          src="../img/frame-title-Chambooth.svg"
+          alt="frame-foto"
+          class="img-chambooth"
+        />
+        <h1 class="title reenie-beanie-regular" id="animated-title">
+          atur moment kamu
+        </h1>
+      </div>
+      <div class="container-content">
+        <div class="container-left">
+          <div class="container-frame">
+            <div class="container-frame-kamera"></div>
+            <div class="container-tombol">
+              <button
+                class="btn btn-filter"
+                id="btn-filter"
+                style="margin-left: 15px"
+              >
+                Filter Warna
+              </button>
+              <div class="filter-options hidden" id="filter-options">
+                <button class="btn filter-btn vintage">Vintage</button>
+                <button class="btn filter-btn sepia">Sepia</button>
+                <button class="btn filter-btn b/w">B/W</button>
+              </div>
+              <button class="btn btn-start">Mulai Foto</button>
+              <button
+                class="btn btn-retake"
+                style="display: none; margin-left: 20px"
+              >
+                Retake
+              </button>
+            </div>
+          </div>
+          <div class="container-filter" style="display: none">
+            <h3 class="title-filter">Background</h3>
+            <div class="button-color">
+              <button class="btn">Black</button>
+              <button class="btn">White</button>
+              <button class="btn">Gray</button>
+              <button class="btn">Blue</button>
+              <a class="btn btn-premium" href="Not_Found.html">Select Warna</a>
+            </div>
+            <h3 class="title-filter">Template</h3>
+            <div class="container-img-cover-template">
+              <img
+                src="../img/cover-frame1.svg"
+                alt="template1"
+                class="template1"
+              />
+              <img
+                src="../img/cover-frame.svg"
+                alt="template2"
+                class="template2"
+              />
+              <img
+                src="../img/cover-frame.svg"
+                alt="template3"
+                class="template3"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="container-frame-preview preview">
+          <p class="lora-uniquifier">Preview</p>
+          <div class="container-frame-preview-canvas">
+            <img
+              src="../img/img-default-frame.svg"
+              alt="frame-foto"
+              id="canvas1"
+            />
+            <img
+              src="../img/img-default-frame.svg"
+              alt="frame-foto"
+              id="canvas2"
+            />
+            <img
+              src="../img/img-default-frame.svg"
+              alt="frame-foto"
+              id="canvas3"
+            />
+            <img
+              src="../img/img-default-frame.svg"
+              alt="frame-foto"
+              id="canvas4"
+            />
+          </div>
+        </div>
+      </div>
+      <button class="btn-arrow" id="btn-arrow">
+        <img src="../img/panah-bawah.svg" alt="icon-panah" />
+      </button>
+    </section>
+
+    <section class="section" id="section3">
+      <div class="container-content">
+        <div class="container-frame">
+          <div class="container-result">
+            <div class="container-title">
+              <img
+                src="../img/frame-title-Chambooth.svg"
+                alt="frame-foto"
+                class="img-chambooth"
+              />
+              <h1 class="title reenie-beanie-regular" id="animated-title">
+                atur moment kamu
+              </h1>
+            </div>
+            <div class="section-button-author md">
+              <div class="button">
+                <button class="btn btn-foto-kembali">Foto Kembali</button>
+                <button class="btn btn-simpan-jpg">Simpan JPG</button>
+                <button class="btn btn-simpan-png">Simpan PNG</button>
+                <button class="btn btn-simpan-png-hd">Simpan PNG HD</button>
+              </div>
+              <h3 class="author poppins">
+                <span class="reenie-beanie-regular">by</span> Dinar Muhammad
+                Akbar
+              </h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-frame-preview preview">
+          <div class="container-frame-preview-canvas canvas1">
+            <img
+              src="../img/img-default-frame.svg"
+              alt="frame-foto"
+              id="canvas1"
+            />
+            <img
+              src="../img/img-default-frame.svg"
+              alt="frame-foto"
+              id="canvas2"
+            />
+            <img
+              src="../img/img-default-frame.svg"
+              alt="frame-foto"
+              id="canvas3"
+            />
+            <img
+              src="../img/img-default-frame.svg"
+              alt="frame-foto"
+              id="canvas4"
+            />
+          </div>
+          <div class="container-frame-preview-canvas canvas2">
+            <img
+              src="../img/img-default-frame.svg"
+              alt="frame-foto"
+              id="canvas1"
+            />
+            <img
+              src="../img/img-default-frame.svg"
+              alt="frame-foto"
+              id="canvas2"
+            />
+            <img
+              src="../img/img-default-frame.svg"
+              alt="frame-foto"
+              id="canvas3"
+            />
+            <img
+              src="../img/img-default-frame.svg"
+              alt="frame-foto"
+              id="canvas4"
+            />
+          </div>
+          <div
+            class="section-button-author sm"
+            style="display: none; margin-top: 50px"
+          >
+            <div class="button">
+              <button class="btn btn-foto-kembali">Foto Kembali</button>
+              <button class="btn btn-simpan-jpg">Simpan JPG</button>
+              <button class="btn btn-simpan-png">Simpan PNG</button>
+              <button class="btn btn-simpan-png-hd">Simpan PNG HD</button>
+            </div>
+            <h3 class="author poppins" style="margin-top: 50px">
+              <span class="reenie-beanie-regular">by</span> Dinar Muhammad Akbar
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="components/animation.js" defer></script>
+    <script src="components/export.js" defer></script>
+    <script src="components/filter.js" defer></script>
+    <script src="components/navigation.js" defer></script>
+    <script src="components/scroll.js" defer></script>
+    <script src="components/setCamera.js" defer></script>
+  </body>
+</html>

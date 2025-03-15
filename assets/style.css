@@ -129,7 +129,7 @@ h5,
   -webkit-text-fill-color: transparent;
 }
 
-#section2 .btn-start{
+#section2 .btn-start {
   margin-left: 20px;
 }
 
@@ -389,6 +389,11 @@ h5,
   pointer-events: none;
 }
 
+#section2 .container-img-cover-template img.template {
+  width: 100px;
+  object-fit: cover;
+}
+
 // arrow
 .container-frame-preview-canvas {
   position: relative;
@@ -401,6 +406,27 @@ h5,
   width: 100%;
   height: 100%;
   z-index: 999;
+}
+
+// color picker
+.button-color {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#colorPicker {
+  display: none;
+  width: 100px;
+  height: 50px;
+  border: none;
+  border-radius: 10%;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+#colorPicker:hover {
+  transform: scale(1.1);
 }
 
 @media (max-width: 768px) {

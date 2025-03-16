@@ -37,34 +37,44 @@ h5,
 // himbauan
 .warning-popup {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-
-.warning-box {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 400px;
   background: white;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
-  width: 90%;
-  max-width: 400px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
 }
 
-.warning-box h2 {
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  text-align: center;
+  font-weight: 800;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.warning-popup h2 {
+  color: white;
   margin: 0 0 10px;
-  font-size: 18px;
+  font-size: 20px;
 }
 
-.warning-box button {
+button.warning-box {
   background: #007bff;
+  margin-top: 50px;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -73,7 +83,7 @@ h5,
   margin-top: 10px;
 }
 
-.warning-box button:hover {
+button.warning-box:hover {
   background: #0056b3;
 }
 

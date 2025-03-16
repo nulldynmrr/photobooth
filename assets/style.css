@@ -675,4 +675,9 @@ button.warning-box:hover {
     text-align: center;
     transform: translateX(-6px);
   }
+
+  #section2 .btn-start {
+    margin-left: 0px;
+    margin-top: 10px;
+  }
 }

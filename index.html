@@ -10,6 +10,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   </head>
   <body>
+    <div id="warningPopup" class="warning-popup" style="display: none">
+      <div class="warning-box">
+        <h2>Ukuran mobile masih dalam tahap peninjauan.</h2>
+        <p>Direkomendasikan menggunakan laptop/desktop.</p>
+        <button onclick="closeWarning()">Oke</button>
+      </div>
+    </div>
     <section class="section" id="section1">
       <div class="container-left container-frame-image">
         <img
@@ -232,7 +239,7 @@
         </div>
       </div>
     </section>
-
+    <script src="components/alert.js" defer></script>
     <script src="components/animation.js" defer></script>
     <script src="components/export.js" defer></script>
     <script src="components/filter.js" defer></script>

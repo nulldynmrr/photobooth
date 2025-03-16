@@ -89,4 +89,3 @@ document.addEventListener("DOMContentLoaded", function () {
   setupButtonEvents(".section-button-author.md");
   setupButtonEvents(".section-button-author.sm");
 });
-  

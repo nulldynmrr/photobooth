@@ -36,9 +36,9 @@ document.addEventListener("DOMContentLoaded", function () {
       container.style.border = color === "black" ? "0.8px solid white" : "none";
       container.style.opacity = color === "black" ? "0.5" : "none";
 
-      let existingTemplate = container.querySelector(".template-overlay");
-      if (existingTemplate) {
-        existingTemplate.remove();
+      let template = container.querySelector(".template-overlay");
+      if (template) {
+        template.remove();
       }
     });
 
@@ -53,9 +53,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function applyTemplate(templateSrc) {
     previewContainers.forEach((container) => {
-      let existingTemplate = container.querySelector(".template-overlay");
+      let template = container.querySelector(".template-overlay");
 
-      if (!existingTemplate) {
+      if (!template) {
         const templateOverlay = document.createElement("img");
         templateOverlay.src = templateSrc;
         templateOverlay.classList.add("template-overlay");
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
         container.style.position = "relative";
         container.appendChild(templateOverlay);
       } else {
-        existingTemplate.src = templateSrc;
+        template.src = templateSrc;
       }
     });
 
@@ -108,22 +108,29 @@ document.addEventListener("DOMContentLoaded", function () {
   function applyFilter(filterType) {
     currentFilter = filterType;
     let filterSrc = "";
+    let filterStyle = "";
 
     switch (filterType) {
       case "vintage":
         filterSrc = "../img/frame-vintage.svg";
+        filterStyle = "sepia(80%) contrast(90%) brightness(80%)";
         break;
-      case "modern":
-        filterSrc = "../img/frame-modern.svg";
+      case "sepia":
+        filterSrc = "../img/frame-sepia.svg";
+        filterStyle = "saturate(120%) contrast(110%)";
         break;
-      case "classic":
-        filterSrc = "../img/frame-classic.svg";
+      case "b/w":
+        filterSrc = "../img/frame-b/w.svg";
+        filterStyle = "grayscale(50%) contrast(95%)";
         break;
       default:
         filterSrc = "../img/frame-template1.svg";
+        filterStyle = "none";
     }
 
-    applyTemplate(filterSrc);
+    const frameElement = document.getElementById("frame");
+    frameElement.src = filterSrc;
+    frameElement.style.filter = filterStyle;
   }
 
   filterButtons.forEach((button) => {

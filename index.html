@@ -8,6 +8,56 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+      .container-popup-alert {
+        position: fixed;
+        top: 1.5%;
+        right: 0.5%;
+        background-color: #ba0101;
+        color: white;
+        padding: 10px 14px;
+
+        font-size: 8px;
+        font-weight: bold;
+        z-index: 9999;
+        max-width: 500px;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        font-family: "Poppins", sans-serif;
+      }
+
+      .popup-content {
+        flex: 1;
+      }
+
+      .popup-content h2 {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .popup-content a {
+        color: #faf600;
+        text-decoration: none;
+        font-size: 12px;
+      }
+
+      .close-alert {
+        font-size: 18px;
+        cursor: pointer;
+        padding: 0 10px;
+        font-weight: bold;
+        opacity: 0.7;
+      }
+
+      .close-alert:hover {
+        opacity: 1;
+      }
+    </style>
   </head>
   <body>
     <div id="warningOverlay" class="overlay" style="display: none">
@@ -17,6 +67,39 @@
         <button onclick="closeWarning()" class="warning-box">Oke</button>
       </div>
     </div>
+
+    <div class="container-popup-alert">
+      <span class="icon-alert" style="margin-right: 20px">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="24"
+          height="24"
+          fill="white"
+        >
+          <path d="M12 2L2 22h20L12 2zm0 16h-2v-2h2v2zm0-4h-2v-4h2v4z" />
+        </svg>
+      </span>
+
+      <div class="popup-content">
+        <h2>Website ini masih tahap UJI COBA</h2>
+        <a
+          href="https://forms.gle/m4wAR49gtUXb2vv28"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Klik di sini jika ada BUG/SARAN MASUKAN
+        </a>
+      </div>
+
+      <span
+        class="close-alert"
+        style="margin-left: 10px"
+        onclick="this.parentElement.style.display='none'"
+        >&times;</span
+      >
+    </div>
+
     <section class="section" id="section1">
       <div class="container-left container-frame-image">
         <img
@@ -110,9 +193,9 @@
                 class="template2 template"
               />
               <img
-                src="../img/cover-frame.svg"
+                src="../img/cover-frame3.png"
                 alt="template3"
-                class="template"
+                class="template3 template"
               />
             </div>
           </div>
@@ -232,7 +315,10 @@
               <button class="btn btn-simpan-png">Simpan PNG</button>
               <button class="btn btn-simpan-png-hd">Simpan PNG HD</button>
             </div>
-            <h3 class="author poppins" style="margin-top: 50px">
+            <h3
+              class="author poppins"
+              style="margin-top: 50px; transform: translateX(-120px)"
+            >
               <span class="reenie-beanie-regular">by</span> Dinar Muhammad Akbar
             </h3>
           </div>

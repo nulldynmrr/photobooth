@@ -483,6 +483,10 @@ button.warning-box:hover {
 }
 
 @media (max-width: 768px) {
+  html body .container-popup-alert {
+    display: hidden !important;
+  }
+
   .btn {
     border-radius: 12px;
     padding: 6px 12px;

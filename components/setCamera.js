@@ -40,8 +40,9 @@ async function openCamera() {
   try {
     videoStream = await navigator.mediaDevices.getUserMedia({ video: true });
     video.srcObject = videoStream;
-    video.style.transform = "scaleX(-1)"; //mirror camera
-    video.style.webkitTransform = "scaleX(-1)";
+    video.style.transform = "scale(-1, 1)";
+    video.style.webkitTransform = "scale(-1, 1)";
+    video.style.objectFit = "cover";
   } catch (error) {
     console.error("Gagal mengakses kamera:", error);
   }

@@ -40,6 +40,8 @@ async function openCamera() {
   try {
     videoStream = await navigator.mediaDevices.getUserMedia({ video: true });
     video.srcObject = videoStream;
+    video.style.transform = "scaleX(-1)"; //mirror camera
+    video.style.webkitTransform = "scaleX(-1)";
   } catch (error) {
     console.error("Gagal mengakses kamera:", error);
   }
@@ -93,7 +95,9 @@ function takePhotoSequence() {
     canvas.width = targetWidth;
     canvas.height = targetHeight;
 
-    // Gambar video ke dalam canvas dengan crop
+    // Gambar video ke dalam canvas dengan crop & mirror
+    context.translate(targetWidth, 0);
+    context.scale(-1, 1);
     context.drawImage(
       video,
       offsetX,

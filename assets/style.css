@@ -576,6 +576,7 @@ button.warning-box:hover {
   #section2 .container-content .container-frame .container-frame-kamera {
     height: 320px;
     border: solid 3px white;
+    transform: scaleX(-1);
   }
   #section2 .container-content .container-frame-preview {
     transform: translateY(20px);

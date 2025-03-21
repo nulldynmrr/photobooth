@@ -481,14 +481,6 @@ button.warning-box:hover {
 #colorPicker:hover {
   transform: scale(1.1);
 }
-
-//mirror
-.container-frame-kamera {
-  transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-  object-fit: cover;
-}
-
 @media (max-width: 768px) {
   html body .container-popup-alert {
     display: hidden !important;

@@ -42,7 +42,7 @@ async function openCamera() {
     video.srcObject = videoStream;
     video.style.transform = "scale(-1, 1)";
     video.style.webkitTransform = "scale(-1, 1)";
-    video.style.objectFit = "cover";
+    video.style.objectFit = "contain";
   } catch (error) {
     console.error("Gagal mengakses kamera:", error);
   }
